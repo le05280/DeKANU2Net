@@ -16,8 +16,8 @@ def time_synchronized():
 
 
 def main():
-    weights_path = "A:\Projects/best_Models\save_weights_None-Murphy_China_S2/model_best.pth"
-    img_path = "A:\Projects/test_Images\L8\predict\Kumar-Roy/Images/LC08_123015_20200819_20200828_2316.png"
+    weights_path = "A:\Projects/best_Models/model_best.pth"
+    img_path = "A:\Projects/test_Images/Images/LC08_123015_20200819_20200828_2316.png"
     threshold = 0.4
 
     assert os.path.exists(img_path), f"image file {img_path} dose not exists."
