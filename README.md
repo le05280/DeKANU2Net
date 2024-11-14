@@ -26,3 +26,20 @@ Source code of multi-source remote sensing image wildfire monitoring based on im
    output_tif_Mask_folder = 输出包含野火掩码的tif图像
    ```
 
+原始代码参照 up主
+
+DeKANU2Net
+是模型的代码，其中改进模型代码位于 DeKANU2Net
+/src/model_DeKANConv.py
+原始模型代码位于 DeKANU2Net
+/src/model_Base.py
+你可以修改DeKANU2Net
+/src/__init__.py
+来选择使用哪一种模型
+
+训练参数在 3-DeKANU2Net
+/train.py 中，--data-path 是数据集的存放位置，
+
+本文上传了 pS2MaskL8 的数据集，需要您从目录中将 DUTS-TE.zip 和 DUTS-TR.zip 下载至本地并解压后移动到 3-DeKANU2Net/Datas 下，
+
+模型训练结束后您可以使用 3-DeKANU2Net/predict.py 将验证数据集输入，查看模型训练效果
