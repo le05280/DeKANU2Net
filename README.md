@@ -36,11 +36,16 @@ Source code of multi-source remote sensing image wildfire monitoring based on im
 
 ### 3-DeKANU2Net
 
-The original code is referenced from the following Bilibili videos:
+The original U2Net code is referenced from the following Bilibili videos:
 
 - [https://www.bilibili.com/video/BV1yB4y1z7m](https://www.bilibili.com/video/BV1yB4y1z7m)
 - [https://www.bilibili.com/video/BV1Kt4y137iS](https://www.bilibili.com/video/BV1Kt4y137iS)
 
+The KAN is referenced from the following：
+Pytorch implementation of U-Net based on Kolmogorov-Arnold Network, based on the U-Net implementation in https://github.com/milesial/Pytorch-UNet.
+The U-Net model is modified to use the FastKANConvLayer instead of the Conv2d layer in the original implementation.
+The Convolution operation is implemented in https://github.com/XiangboGaoBarry/KA-Conv
+https://github.com/JaouadT/KANU_Net/blob/main/src/kan_unet.py
 **DeKANU2Net** is the model's code, where the improved model code is located at `3-DeKANU2Net/src/model_DeKANConv.py`. The original model code is located at `3-DeKANU2Net/src/model_Base.py`. You can modify `3-DeKANU2Net/src/__init__.py` to choose which model to use.
 
 The training parameters are in `3-DeKANU2Net/train.py`, where `--data-path` is the location of the dataset.
@@ -86,11 +91,17 @@ After the model training is complete, you can use `3-DeKANU2Net/predict.py` to i
 
 #### 3-DeKANU2Net
 
-原始代码参照 up主bilibili
+U2Net原始代码参照 up主bilibili
 
 [https://www.bilibili.com/video/BV1yB4y1z7m](https://www.bilibili.com/video/BV1yB4y1z7m)
 
 [https://www.bilibili.com/video/BV1Kt4y137iS](https://www.bilibili.com/video/BV1Kt4y137iS)
+
+KAN网络实现是参照下文
+Pytorch implementation of U-Net based on Kolmogorov-Arnold Network, based on the U-Net implementation in https://github.com/milesial/Pytorch-UNet.
+The U-Net model is modified to use the FastKANConvLayer instead of the Conv2d layer in the original implementation.
+The Convolution operation is implemented in https://github.com/XiangboGaoBarry/KA-Conv
+https://github.com/JaouadT/KANU_Net/blob/main/src/kan_unet.py
 
 DeKANU2Net是模型的代码，其中改进模型代码位于 3-DeKANU2Net/src/model_DeKANConv.py
 原始模型代码位于 3-DeKANU2Net/src/model_Base.py
